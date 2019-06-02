@@ -1,9 +1,13 @@
 var mysql = require('mysql');　　//mysqlを要求
 
+// var connection = mysql.createConnection({   　　//hostの情報でDBへアクセス
+// 　　host: 'localhost', port : 3306,   user: 'root',   
+// 　　　　　password: 'mysql', database: 'janken-game'
+// });
 var connection = mysql.createConnection({   　　//hostの情報でDBへアクセス
-　　host: 'localhost', port : 3306,   user: 'root',   
-　　　　　password: 'mysql', database: 'janken-game'
-});
+    　　host: 'us-cdbr-iron-east-02.cleardb.net', port : 3306,   user: 'roo18bd15dc7f445t',   
+    　　　　　password: 'b18bd15dc7f445:24df30c2', database: 'heroku_238a25c455'
+    });
 
 exports.connection = connection;
 
