@@ -5,8 +5,8 @@ var mysql = require('mysql');　　//mysqlを要求
 // 　　　　　password: 'mysql', database: 'janken-game'
 // });
 var connection = mysql.createConnection({   　　//hostの情報でDBへアクセス
-    　　host: 'us-cdbr-iron-east-02.cleardb.net', port : 3306,   user: 'roo18bd15dc7f445t',   
-    　　　　　password: 'b18bd15dc7f445:24df30c2', database: 'heroku_238a25c455'
+    　　host: 'us-cdbr-iron-east-02.cleardb.net', port : 3306,   user: 'b18bd15dc7f445',   
+    　　　　　password: '24df30c2', database: 'heroku_238a25c455e90d5'
     });
 
 exports.connection = connection;
