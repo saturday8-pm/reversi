@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>login page</title>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+    <main class="container text-center">
+        <div class="col-md-4" style="margin:auto">
+            <h3>Login</h3>
+            <form action="/login" method="post" class="form">
+                UserName:<input type="text" class="form-control" name="name"><br>
+                Pass:<input type="password" class="form-control" name="pass"><br>
+                <div><input type="submit" value="login" class="btn btn-info" style="width:100%"></div>
+            </form>
+            <% if (typeof passMessage !== 'undefined') { %>
+            <p class="error"><%= passMessage %></p>
+            <% } %>
+            <a href="/user">新規登録</a>
+        </div>
+    </main>
+</body>
+
+</html>

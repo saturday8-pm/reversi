@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reversi</title>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+    <main class="container text-center">
+
+
+        <h1>Reversi</h1>
+        UserName:<span id="username"><%= name %></span>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div style="display:none">
+                    <div id="cell" class="square">
+                        <div class="cell"></div>
+                    </div>
+                    <div id="black" class="square black"><span class="block">●</span></div>
+                    <div id="white" class="square white"><span class="block">●</span></div>
+                </div>
+                <div style="font-size: 24px">
+                    <span class="black-icon">●</span><span class="text" id="player1"></span>
+                    <span class="vs text">vs</span><span class="text" id="player2"></span><span class="white-icon" style="-webkit-text-stroke: 1px black;">●</span>
+                </div>
+                <span id="next-player"></span>さんの番です
+                <div class="board-squea">
+                    <div id="board" style="margin:auto;"></div>
+                </div>
+                <button class="btn btn-warning btn-lg" id="finish">ゲーム終了</button>
+                <div id="result"></div>
+            </div>
+
+            <div class="col-md-6" style="padding-top:50px;">
+
+                <!-- メッセージ入力欄 -->
+                <form id="message_form" action="#" class="form-inline">
+                    <input id="input_msg" autocomplete="off" class="form form-control input" /><button
+                        class="btn btn-primary">送信</button>
+                </form>
+                <!-- メッセージの表示 -->
+                <ul id="messages" class="text-left"></ul>
+
+
+            </div>
+        </div>
+        <div class="col-md-4 text-center" style="float:right">
+            <a href="/logout" action="get"><button class="btn btn-secondary btn-sm">ログアウト</button></a>
+        </div>
+
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="./js/client.js"></script>
+
+</body>
+
+</html>
